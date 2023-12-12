@@ -1026,6 +1026,7 @@ body::after {
 
 .socials__link {
   height: fit-content;
+  display: inline-block;
 }
 .socials__link svg path {
   transition: fill 0.3s ease;
@@ -2929,6 +2930,9 @@ body[style*="padding-right: 17px"] .header {
     display: block;
     right: -0.625rem;
   }
+}
+.services__slider {
+  padding: 0.125rem;
 }
 @media (max-width: 52.3125em) {
   .services__slider {
