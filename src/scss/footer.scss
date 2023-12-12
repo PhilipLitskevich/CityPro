@@ -1,0 +1,136 @@
+//====================================================================================================
+.footer {
+	background: #E8E8E8;
+	@include adaptiveValue("padding-top", 50, 30, $containerWidth, 320, 1);
+	@include adaptiveValue("padding-bottom", 56, 23, $containerWidth, 320, 1);
+
+	&__top {
+		display: flex;
+		gap: rem(50);
+		justify-content: space-between;
+
+		@include adaptiveValue("gap", 50, 20, $containerWidth, 767.98, 1);
+		@media (max-width:$mobile){
+			@include adaptiveValue("gap", 50, 20, 767.98, 400, 1);
+		}
+		@media (max-width:$mobileSmall){
+			 flex-direction: column;
+			 gap: rem(18);
+		}
+	}
+
+	&__col {
+		// flex-basis: 30%;
+		flex: 0 0 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media (max-width:$mobile){
+			 flex: 0 0 40%; 
+		}
+
+		&.col--logo {
+			@media (max-width:$mobile){
+				 flex: 1 0 40%; 
+			}
+			@media (max-width:$mobileSmall){
+				 align-items: center;
+				 text-align: center; 
+			}
+		}
+
+		&.col--address {
+			@media (max-width:$mobile){
+				 display: none; 
+			}
+		}
+
+		.policy-link{
+			text-decoration-line: underline;
+			@media (max-width:$mobileSmall){
+				 display: flex;
+				 width: fit-content;
+				 margin: 0 auto; 
+			}
+		}
+	}
+
+	&__logo-wrapper {
+		@include adaptiveValue("max-width", 295, 200, $containerWidth, 479.98, 1);
+
+		svg {
+			width: 100%;
+		}
+	}
+
+	&__text {
+		margin-top: rem(18);
+		@include adaptiveValue("font-size", 16, 14, $containerWidth, 320, 1);
+		font-weight: 500;
+		line-height: normal;
+
+		@media (max-width:$mobileSmall){
+			 max-width: rem(320); 
+		}
+	}
+
+	&__nav {
+		margin-bottom: rem(30);
+		@media (max-width:$mobileSmall){
+			display: none; 
+	 }
+	}
+
+	&__nav-list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+	}
+
+	&__nav-link {
+		font-size: 16px;
+	}
+
+	&__bottom {
+		color: #272727;
+		@include adaptiveValue("font-size", 16, 14, $containerWidth, 320, 1);
+		font-weight: 600;
+
+		margin-top: rem(50);
+		display: flex;
+		align-items: center;
+		// justify-content: space-between;
+		// @include adaptiveValue("gap", 50, 20, $containerWidth, 780, 1);
+		@media (max-width:$mobile){
+			 justify-content: space-between; 
+		}
+		@media (max-width:$mobileSmall){
+			 flex-direction: column;
+			 align-items: center;
+			 justify-content: center;
+
+			 margin-top: rem(21);
+		}
+
+	}
+
+	&__2023 {
+		flex: 0 0 35%; 	
+	}
+}
+
+.developers {
+	flex: 0 0 40%; 
+	display: flex;
+	align-items: center;
+	span {
+		margin-right: rem(9);
+	}
+
+@media (max-width:$mobileSmall){
+	 margin-top: rem(20); 
+}
+}
+
+//====================================================================================================

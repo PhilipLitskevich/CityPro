@@ -1,0 +1,68 @@
+.section__contacts {
+	@include adaptiveValue("margin-bottom", 106, 50, 699, 479.98, 1);
+}
+
+.contacts__ {
+	&container {
+		display: flex;
+		gap: rem(40);
+
+		@media (max-width: em(699)) {
+			flex-direction: column;
+
+		}
+	}
+
+	&left {
+		.contacts__policy-link.policy-link {
+			display: block;
+			width: fit-content;
+			margin: rem(30) auto 0 0;
+
+			@media (max-width:$mobile) {
+				margin: rem(30) auto 0;
+			}
+		}
+
+		@media (max-width: em(699)) {
+			.contacts__block {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+			}
+			.contacts__list {
+				margin-bottom: rem(25);
+			}
+
+			.contacts__item, .contacts__item-link{
+				flex-direction: column;
+				text-align: center;
+			}
+		}
+	}
+
+	&title {
+		margin-bottom: rem(22);
+
+		@media (max-width: em(699)) {
+			text-align: center;
+		}
+	}
+
+	&policy-link.policy-link {
+		text-decoration-line: underline;
+		margin-top: rem(30);
+	}
+
+	&map {
+		width: 100%;
+		height: auto;
+		border-radius: rem(15);
+		overflow: hidden;
+
+		@media (max-width: em(699)) {
+			aspect-ratio: 1 / 1;
+		}
+	}
+}

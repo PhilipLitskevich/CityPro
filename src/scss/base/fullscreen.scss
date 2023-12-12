@@ -1,0 +1,7 @@
+[data-fullscreen] {
+	min-height: 100vh;
+	@media (max-width: $mobile) {
+		min-height: max(rem(600), 97svh);
+		transition: height 0.2s;
+	}
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"CityPro"
+	})
+	<body>
+		<div class="loader-wrapper">
+			<span class="loader"></span>
+		</div>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+					@@include('html/_hero.htm',{})
+					@@include('html/_about.htm',{})
+					@@include('html/_services.htm',{})
+					@@include('html/_partners.htm',{})
+					@@include('html/_portfolio.htm',{})
+					@@include('html/_application.htm',{})
+					@@include('html/_contacts.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		<div class="scroll-up" tabindex="0" aria-label="Наверх" role="button">
+			<svg xmlns="http://www.w3.org/2000/svg" width="54" height="29" viewBox="0 0 54 29" fill="none">
+				<path d="M52 27L27 2L2 27" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

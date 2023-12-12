@@ -1,0 +1,91 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: block;
+	padding: rem(22) 0px;
+	min-width: rem(270);
+	color: #fff;
+	border-radius: 15px;
+	text-align: center;
+	font-size: rem(16);
+	font-weight: 700;
+	margin: rem(30) auto 0;
+}
+
+.read-more__btn {
+	--btn-width: 60px;
+	--btn-height: var(--btn-width);
+	
+	display: none;
+	width: var(--btn-width);
+	height: var(--btn-height);
+	background-color: transparent;
+	border-radius: 50%;
+
+	position: absolute;
+	z-index: 10;
+	bottom: calc(0px - var(--btn-width) / 2);
+	left: calc(50% - var(--btn-width) / 2);
+	transition: transform .5s ease;
+	-webkit-tap-highlight-color: transparent;
+
+	@media (max-width:$mobileSmall) {
+		display: block;
+	}
+
+	&._active{
+		transform: rotate(180deg);
+	}
+
+	svg path, svg circle {
+		transition: stroke .2s
+	}
+
+	&:active {
+		svg path, svg circle {
+			stroke: #54994B;
+		}
+	}
+}
+
+// Scroll Up
+
+.scroll-up {
+	position: fixed;
+	right: rem(15);
+	bottom: rem(15);
+	width: rem(152);
+	@include adaptiveValue("width", 152, 76, $containerWidth, 479.98, 1);
+	aspect-ratio: 1 / 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: .5s ease;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(50px);
+	z-index: 500;
+
+	border-radius: 50%;
+	background-color: rgba(#79AEFF,  0);
+  backdrop-filter: blur(10px);
+	svg {
+		width: 33%; /* 50/152 */
+	}
+
+	@media (max-width:$mobileSmall){
+		 display: none; 
+	}
+}
+
+.scroll-up--active {
+	opacity: 1;
+	background-color: rgba(#79AEFF, 0.5);
+	visibility: visible;
+	transform: translateY(0);
+	&:hover{
+		background-color: rgba(#79AEFF, 1);
+	}
+}
