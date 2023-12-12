@@ -151,6 +151,7 @@
 
 .socials__link {
 	height: fit-content;
+	display: inline-block;
 	svg {
 		path {
 			transition: fill .3s ease;

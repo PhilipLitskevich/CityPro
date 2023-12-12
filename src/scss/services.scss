@@ -50,6 +50,7 @@
 	}
 
 	&slider {
+		padding: rem(2);
 		@media (max-width: em(837)) {
 			margin: 0 auto;
 			max-width: rem(570);
