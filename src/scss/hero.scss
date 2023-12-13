@@ -52,7 +52,8 @@
 		margin-left: rem(70);
 		position: relative;
 		height: 100%;
-		padding-top: max(rem(150), 25.466667vh);
+		padding-top: max(rem(200), 25.466667vh);
+		padding-bottom: rem(100);
 		/* 191/750 */
 		z-index: 3;
 
@@ -184,34 +185,39 @@
 			width: 100%;
 		}
 
-		.hero__img {
-			object-fit: contain;
+		.hero__image {
 			position: absolute;
-			width: 112.222222%;
-			/* 505/450 */
 			left: 0;
 			bottom: 0;
 			z-index: 3;
-
-			&--2 {
-				left: auto;
-				// left: 4.395604%; /* 20/455 */
-				right: 0;
-				width: 104.444444%;
-				/* 470/450 */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			aspect-ratio: 505 / 496;
+			
+			&--1 {
+				width: 112.222222%;
+				background-image: url(@img/hero/1.png);
 			}
-
+			&--2 {
+				width: 104.444444%;
+				right: 0;
+				left: auto;
+				background-image: url(@img/hero/1.png);
+				aspect-ratio: 470/450;
+			}
 			&--3 {
 				width: 100%;
 				right: 0;
+				background-image: url(@img/hero/3.png);
+				aspect-ratio: 450/466;
 			}
 		}
 
 		.hero__circle-box {
 			position: absolute;
 
-			--position: -76.222222%;
-			// 76.222222%; /* 343/450 */
+			--position: -76.222222%; /* 343/450 */
 			position: absolute;
 			top: var(--position);
 			left: var(--position);
@@ -237,9 +243,7 @@
 				animation-timing-function: ease-out;
 				animation-iteration-count: infinite;
 				aspect-ratio: 1 / 1;
-
 				animation-name: circle1Animation;
-
 				@media (max-width:$mobile) {
 					animation-name: circle1Animation-2;
 				}
@@ -248,28 +252,22 @@
 				width: 38%;
 
 				&-1 {
-					// width: 100%;
 					animation-delay: 0s;
 				}
 
 				&-2 {
-					// width: 74.889868%;
 					animation-delay: 4s;
 				}
 
 				&-3 {
-					// width: 57.21831%;
-					/* 650/1136 */
 					animation-delay: 8s;
 				}
-
 				&-4 {
 					animation-delay: 12s;
 				}
 			}
 		}
 	}
-
 
 	&navigation-wrapper {
 		z-index: 10;

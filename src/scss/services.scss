@@ -8,12 +8,14 @@
 		background: #E8E8E8;
 		@include adaptiveValue("padding-top", 60, 34, $containerWidth, 400, 1);
 		@include adaptiveValue("padding-bottom", 162, 62, $containerWidth, 479.98, 1);
-		@media (max-width:$mobile){
-			 border-radius: 11px 11px 0 0 ;  
+
+		@media (max-width:$mobile) {
+			border-radius: 11px 11px 0 0;
 		}
-		@media (max-width:$mobileSmall){
-			 border-radius: 11px 11px 20px 20px;
-			 padding-bottom: 0; 
+
+		@media (max-width:$mobileSmall) {
+			border-radius: 11px 11px 20px 20px;
+			padding-bottom: 0;
 		}
 	}
 
@@ -51,6 +53,7 @@
 
 	&slider {
 		padding: rem(2);
+
 		@media (max-width: em(837)) {
 			margin: 0 auto;
 			max-width: rem(570);
@@ -60,9 +63,6 @@
 			max-width: rem(270);
 		}
 	}
-
-	&wrapper {}
-
 	&slide {
 		min-height: rem(500);
 		z-index: 3;
@@ -95,7 +95,8 @@
 			background: linear-gradient(180deg, rgba(0, 102, 255, 0.00) 25%, rgba(0, 102, 255, .3) 55%, rgba(0, 102, 255, .3) 60%, rgba(#000, 1) 100%);
 		}
 
-		&:hover, &:focus-within {
+		&:hover,
+		&:focus-within {
 
 			.services__link {
 				bottom: 0;
@@ -105,6 +106,7 @@
 				filter: grayscale(0%);
 				opacity: .6;
 			}
+
 
 			&::after {
 				background-color: #06F;
@@ -141,17 +143,30 @@
 	}
 
 	&slide-img {
-		display: block;
 		position: absolute;
 		inset: 0;
 		z-index: 2;
-		object-fit: cover;
-		object-position: 50% 30%;
 		filter: grayscale(80%);
 		opacity: .6;
 
 		transition: .3s ease;
 		transition-property: opacity, filter;
+		
+		background-position: 50% 30%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		&--1 {
+			background-image: url(@img/services-1.jpg);
+		}
+		&--2{
+			background-image: url(@img/services-2.jpg);
+		}
+		&--3{
+			background-image: url(@img/services-3.jpg);
+		}
+		&--4{
+			background-image: url(@img/services-4.jpg);
+		}
 	}
 
 	&icon-box {
@@ -167,7 +182,6 @@
 	&text {
 		color: #FFF;
 		text-align: center;
-		// @include adaptiveValue("font-size", 16, 14, $containerWidth, 400, 1);
 		font-size: rem(20);
 		font-weight: 700;
 		line-height: 111.167%;
@@ -206,25 +220,30 @@
 		justify-content: center;
 		align-items: center;
 		gap: rem(22);
-		@media (max-width:$mobile){
-			 margin-bottom: rem(30); 
+
+		@media (max-width:$mobile) {
+			margin-bottom: rem(30);
 		}
-		@media (max-width: em(600)){
+
+		@media (max-width: em(600)) {
 			justify-content: space-between;
 			gap: rem(10);
-			  
+
 		}
 
 	}
-	&-navigation-wrapper.lock{
+
+	&-navigation-wrapper.lock {
 		display: none;
 	}
+
 	&-fraction {
 		text-align: center;
 		font-size: rem(18);
 		font-weight: 700;
 	}
 }
+
 .services__link:focus {
-	transition: none;	
+	transition: none;
 }

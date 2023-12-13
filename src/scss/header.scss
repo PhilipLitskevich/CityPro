@@ -81,14 +81,15 @@ body[style*="padding-right: 17px"] {
 		@media (max-width:$tablet) {
 			max-width: none;
 			position: fixed;
+			
 			z-index: 1;
 			width: 100%;
 			height: fit-content;
+			max-height: 97%;
 			left: 0;
-			top: -100%;
+			top: -200%;
 			right: 0;
 			bottom: 0;
-			overflow: auto;
 			flex-direction: column;
 			justify-content: center;
 			padding: 0 rem(20);
@@ -118,6 +119,9 @@ body[style*="padding-right: 17px"] {
 
 		@media (max-width:$tablet) {
 			flex-direction: column;
+			width: 100%;
+			flex-wrap: nowrap;
+			overflow-y: auto;
 			row-gap: rem(20);
 		}
 	}
