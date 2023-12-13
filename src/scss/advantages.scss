@@ -1,0 +1,42 @@
+.advantages {
+	@include adaptiveValue("margin-top", 101, 50, 767.98, 479.98, 1);
+}
+
+.advantages__list {
+	display: flex;
+	gap: rem(30);
+	justify-content: center;
+
+	@media (max-width:$mobile) {
+		padding: 0 rem(20);
+		flex-wrap: wrap;
+		row-gap: rem(30);
+	}
+}
+
+.advantages__item {
+	flex: 1 1 25%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: rem(22);
+
+	@media (max-width:$mobile) {
+		flex-basis: 45%;
+	}
+
+	@media (max-width:$mobileSmall) {
+		flex-basis: 100%;
+		max-width: rem(300);
+	}
+}
+
+.advantages__image-wrapper {
+	min-height: rem(63);
+}
+
+.advantages__text {
+	text-align: center;
+	@include adaptiveValue("font-size", 16, 14, $containerWidth, 400, 1);
+	font-weight: 700;
+}

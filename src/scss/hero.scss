@@ -1,6 +1,4 @@
-.section__hero {}
-
-.hero-slide__container {
+.hero__slide-container{
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -273,15 +271,9 @@
 	}
 
 
-	&slider-navigation-wrapper {
+	&navigation-wrapper {
 		z-index: 10;
 	}
-
-	&slider-fraction {}
-
-	&slider-fraction--current {}
-
-	&slider-fraction--max {}
 
 	&bg {
 		position: absolute;
@@ -324,11 +316,11 @@
 	}
 }
 
-.hero-navigations__container {
+.hero__navigations-container {
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 20vh;
+	bottom: max(rem(150), 20vh);
 	/* 150/750 */
 
 	@media (max-width:$mobile) {
@@ -337,7 +329,7 @@
 		justify-content: center;
 	}
 
-	.hero__slider-navigation-wrapper {
+	.hero__navigation-wrapper {
 		margin-left: rem(70);
 
 		position: relative;
@@ -358,7 +350,7 @@
 		}
 	}
 
-	.hero__slider-fraction {
+	.hero__fraction {
 		text-align: center;
 		font-size: rem(18);
 		font-weight: 700;
