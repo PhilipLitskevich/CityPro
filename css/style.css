@@ -1479,21 +1479,16 @@ body[style*="padding-right: 17px"] .header {
     max-width: 38.75rem;
   }
 }
-@media (min-width: 47.99875em) and (max-width: 75.625em) {
-  @supports (max-width: clamp( 25rem , 1.1103004389rem  +  49.7715035519vw , 38.75rem )) {
+@media (min-width: 61.99875em) and (max-width: 75.625em) {
+  @supports (max-width: clamp( 31.875rem , 0.5940968718rem  +  50.454086781vw , 38.75rem )) {
     .menu__body {
-      max-width: clamp( 25rem , 1.1103004389rem  +  49.7715035519vw , 38.75rem );
+      max-width: clamp( 31.875rem , 0.5940968718rem  +  50.454086781vw , 38.75rem );
     }
   }
-  @supports not (max-width: clamp( 25rem , 1.1103004389rem  +  49.7715035519vw , 38.75rem )) {
+  @supports not (max-width: clamp( 31.875rem , 0.5940968718rem  +  50.454086781vw , 38.75rem )) {
     .menu__body {
-      max-width: calc(25rem + 13.75 * (100vw - 47.99875rem) / 27.62625);
+      max-width: calc(31.875rem + 6.875 * (100vw - 61.99875rem) / 13.62625);
     }
-  }
-}
-@media (max-width: 47.99875em) {
-  .menu__body {
-    max-width: 25rem;
   }
 }
 @media (max-width: 61.99875em) {
