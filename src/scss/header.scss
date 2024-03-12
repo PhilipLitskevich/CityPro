@@ -76,7 +76,7 @@ body[style*="padding-right: 17px"] {
 		@include adaptiveValue("margin-left", 38, 25, $containerWidth, 900, 1);
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("max-width", 620, 400, $containerWidth, 767.98, 1);
+		@include adaptiveValue("max-width", 620, 510, $containerWidth, 991.98, 2);
 
 		@media (max-width:$tablet) {
 			max-width: none;
